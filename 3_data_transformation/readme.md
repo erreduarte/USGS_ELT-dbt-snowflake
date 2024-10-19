@@ -52,5 +52,28 @@ sources:
     schema: STG_EARTHQUAKE_DATA  # The schema where the source table is stored.
     tables:
       - name: STG_EARTHQUAKE_HISTORY  # Name of the source table
+```
+
+## Scheduled Jobs with dbt Cloud
+
+To ensure timely data transformations, jobs have been successfully scheduled using **dbt Cloud**. The automation guarantees that both data ingestion and transformations are executed regularly, keeping the earthquake dataset up-to-date.
+
+### Job Details
+1. **Ingesting to Staging**: 
+   - This job runs every hour to populate the staging table `STG_EARTHQUAKE_HISTORY` from raw data.
+   - The staging table acts as an intermediary, allowing further transformations before moving the data into the final schema.
+   
+2. **Schema Feeding**: 
+   - Following the staging ingestion, another job runs to apply transformations and populate the **dimension** and **fact** tables in the `EARTHQUAKE_DATA` schema.
+
+### Execution Logs
+Example of a successful execution log:
+
+![Job Success Log](assets/dbt_job_success.png)
+
+For full logs, check the [logs directory](logs/).
+
+These jobs ensure that the data pipeline remains operational without the need for manual intervention.
+
 
 

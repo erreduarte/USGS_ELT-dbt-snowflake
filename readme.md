@@ -18,7 +18,7 @@ This project demonstrates an **ELTL (Extract, Load, Transform, and Load)** proce
     - **![FACTS_USGS_EQ](4_data_storage/final_data/3_facts_usgs_eQ_2024_10_19.csv)**
     - **![DIM_STATUS_USGS_EQ](4_data_storage/final_data/4_dim_status_usgs_eq_2024-10-19.csv)**
     - **![DIM_PROPERTIES_USGS_EQ](4_data_storage/final_data/5_dim_properties_usgs_eq_2024_10_19.csv)**
-    - **![DIM_LOCATION_USGS_EQ](4_data_storage/final_data/6_dim_location_usgs_eq_2024_10_19.csv)**    
+    - **![DIM_LOCATION_USGS_EQ](4_data_storage/final_data/6_dim_location_usgs_eq_2024_10_19.csv)**   
 
 
 For further details in this stage, you can access it directly here: ![README](4_data_storage/readme.md)
