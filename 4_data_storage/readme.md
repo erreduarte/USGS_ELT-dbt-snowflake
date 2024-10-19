@@ -2,7 +2,7 @@
 
 In this section, I provide an overview of the Snowflake schema used in the project to manage and store earthquake data effectively. The schema is organized into three main sections: **Raw Data**, **Staging Data**, and **Final Data**. Each section plays a crucial role in the ELTL (Extract, Load, Transform, Load) process, ensuring that the data is properly ingested, transformed, and structured for analysis.
 
-![Snowflake Schema Diagram](assets/snowflake_diagram.png)
+![Snowflake Schema Diagram](/assets/snowflake_diagram.png)
 
 ## 1. Raw Data Schema
 

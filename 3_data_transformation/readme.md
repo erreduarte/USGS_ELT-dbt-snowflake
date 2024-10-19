@@ -4,7 +4,7 @@
 
 This project demonstrates the use of dbt (data build tool) for transforming earthquake data stored in a staging table within Snowflake. The transformation process involves cleansing, organizing, and preparing the data for analysis, ensuring that only unique records are retained for further processing.
 
-![dbt_lineage](assets/dbt_lineage.png)
+![dbt_lineage](/assets/dbt_lineage.png)
 
 ## Transformation Logic
 
@@ -14,7 +14,7 @@ The dbt model retrieves data from the `raw_earthquake_history` staging table, ap
 - **De-duplication:** This process is crucial due to the nature of data streaming with Kafka, where the same earthquake event may be sent multiple times within a 30-minute window. To ensure that only the most recent record for each earthquake is retained, the transformation logic filters out duplicates based on the unique combination of `ID` and `REGISTERED_AT`. By using this approach, we effectively manage potential redundancy in the dataset while ensuring that the most relevant information is preserved for analysis.
 - **Data Filtering:** Excluding records that already exist in the destination table to prevent duplication.
 
-For detailed transformation logic, please refer to the SQL file located in the `sql` directory: [staging_table](3_data_transformation/staging_data.sql).
+For detailed transformation logic, please refer to the SQL file located in the `sql` directory: [staging_table](/3_data_transformation/staging_data.sql).
 
 ## Final Schema Feeding
 

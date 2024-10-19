@@ -45,7 +45,7 @@ The following JAR files are required for integrating Spark with Kafka and Snowfl
 
 ## config.json
 
-A configuration file ![`config.json`](assets/config.json) is required for connecting to Kafka and Snowflake. It contains necessary information like Kafka broker details, Snowflake credentials, and paths to the required JARs.
+A configuration file ![`config.json`](/assets/config.json) is required for connecting to Kafka and Snowflake. It contains necessary information like Kafka broker details, Snowflake credentials, and paths to the required JARs.
 
 > **Note**: In the `config.json`, you need to specify the **schema** and **table** for Snowflake. However, the table doesn't need to be created beforehand. When writing data to Snowflake, the platform will automatically create a new table in the specified schema to accommodate the receiving data.
 

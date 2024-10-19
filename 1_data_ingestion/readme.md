@@ -14,7 +14,7 @@ The main objective of Part 1 is to stream earthquake data in near real-time by u
 1. **Kafka Setup**: Ensure you have a running Kafka instance and a topic named `earthquake`.
 
 2. **Config.json**:  
-   Create a `config.json` file containing credentials, connections, and other details. ![Config_Json](assets/config.json)
+   Create a `config.json` file containing credentials, connections, and other details. ![Config_Json](/assets/config.json)
 
 3. **Install Dependencies**:
    - **Kafka**:
