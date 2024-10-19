@@ -8,17 +8,20 @@ This project demonstrates an **ELTL (Extract, Load, Transform, and Load)** proce
 ![Pipeline Diagram](assets/pipeline_diagram.png)
 
 ### Pipeline Steps:
-1. **Extract**: Real-time earthquake data is extracted from the **USGS Earthquake API** and produced to a Kafka topic using a Kafka Producer.
-2. **Load**: The Kafka data stream is consumed using **Apache Spark (PySpark)**, and the raw data is loaded into a **Snowflake** staging table in the `PUBLIC` schema.
-3. **Transform**: The raw data in Snowflake is transformed using **dbt (Data Build Tool)** to apply cleaning, parsing, and business logic. The transformed data is stored in **Snowflake** in the `STG_EARTHQUAKE_DATA` schema, in a table called `STG_EARTHQUAKE_HISTORY`.
+1. **Extract**: Real-time earthquake data is extracted from the **USGS Earthquake API** and produced to a Kafka topic using a Kafka Producer. ![README](1_data_ingestion/readme.md)
+2. **Load**: The Kafka data stream is consumed using **Apache Spark (PySpark)**, and the raw data is loaded into a **Snowflake** staging table in the `PUBLIC` schema. ![README](2_data_processing/readme.md)
+3. **Transform**: The raw data in Snowflake is transformed using **dbt (Data Build Tool)** to apply cleaning, parsing, and business logic. The transformed data is stored in **Snowflake** in the `STG_EARTHQUAKE_DATA` schema, in a table called `STG_EARTHQUAKE_HISTORY`. ![README](3_data_transformation/readme.md)
 
    > **Note**: The staging table serves as a **debugging source** before feeding the cleaned data into the final schema. This ensures potential errors are addressed early, as feeding directly from the raw data could introduce multiple issues. For instance, the raw data contains **duplicate records** where entries may share the same `id` but have slight differences in the `registered_at` timestamp (down to milliseconds). To handle this, the transformation uses the **`ROW_NUMBER()`** function to eliminate duplicates, ensuring that only the most recent record for each `id` is retained.
 
 4. **Load**: The final transformed data is distributed into the appropriate **fact** and **dimension** tables within the `EARTHQUAKE_DATA` schema. These tables follow a star schema design and include:
-    - **FACTS_USGS_EQ**
-    - **DIM_STATUS_USGS_EQ**
-    - **DIM_STATUS_USGS_EQ**
-    - **DIM_LOCATION_USGS_EQ**
+    - **![FACTS_USGS_EQ](4_data_storage/final_data/3_facts_usgs_eQ_2024_10_19.csv)**
+    - **![DIM_STATUS_USGS_EQ](4_data_storage/final_data/4_dim_status_usgs_eq_2024-10-19.csv)**
+    - **![DIM_PROPERTIES_USGS_EQ](4_data_storage/final_data/5_dim_properties_usgs_eq_2024_10_19.csv)**
+    - **![DIM_LOCATION_USGS_EQ](4_data_storage/final_data/6_dim_location_usgs_eq_2024_10_19.csv)**    
+
+
+For further details in this stage, you can access it directly here: ![README](4_data_storage/readme.md)
 
 ## Technologies Used
 - **Kafka**: For real-time data streaming.
@@ -80,10 +83,10 @@ earthquake-snowflake/
 ## Usage Instructions
 
 1. **Data Ingestion**: 
-   Run the Kafka Producer script (`earthquake_producer.py`) to extract real-time earthquake data from the USGS API and produce it to a Kafka topic.
+   Run the Kafka Producer script ![`earthquake_producer.py`](1_data_ingestion/earthquake_producer.py) to extract real-time earthquake data from the USGS API and produce it to a Kafka topic.
 
 2. **Data Processing**: 
-   Run the Kafka Consumer script (`earthquake_consumer.py`) using Apache Spark to consume the Kafka topic and load the raw data into Snowflake.
+   Run the Kafka Consumer script ![`earthquake_consumer.py`](2_data_processing/earthquake_consumer.py) using Apache Spark to consume the Kafka topic and load the raw data into Snowflake.
 
 3. **Data Transformation**: 
    Use dbt to transform the raw data stored in Snowflake. Run the dbt models (`dbt run`) to apply transformations and populate the staging table.
