@@ -1,0 +1,24 @@
+{ 
+    "spark_session":        {
+                                "kafka_jars": "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0",
+                                "snowflake_jars": "net.snowflake:spark-snowflake_2.12:2.16.0-spark_3.4"
+                                
+                                } ,
+    
+    "kafka_information":    {
+                                "host": "localhost:90929",  
+                                "topic": "earthquake"
+                            
+                            },
+    
+    "snowflake":            {
+                                "sfURL": "account_url",  
+                                "sfUser": "user",  
+                                "sfPassword": "snowflake_credentials",  
+                                "sfDatabase": "database_name",  
+                                "sfSchema": "PUBLIC", 
+                                "sfWarehouse": "COMPUTE_WH",
+                                "dbtable": "table_name",                            
+                                "sfJdbcUrl": "jdbc:snowflake://{account}.snowflakecomputing.com/?warehouse={warehouse}&db={database}&schema={schema}"
+                            }
+}

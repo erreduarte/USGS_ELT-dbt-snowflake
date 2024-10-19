@@ -1,0 +1,44 @@
+
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'usgs_snowflake'
+version: '1.0.0'
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'usgs_snowflake'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+
+# Configuring models
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+
+# In this example config, we tell dbt to build all models in the example/
+# directory as views. These settings can be overridden in the individual model
+# files using the `{{ config(...) }}` macro.
+models:
+  usgs_snowflake:
+    +materialized: incremental  # This will apply to all models in the usgs_snowflake project
+
+    staging_data:  # This is the folder name where you can set configurations for models in this folder
+      +materialized: incremental  # This will apply to all models inside the staging_data folder
+      +schema: STG_EARTHQUAKE_DATA  # This applies only to models inside the staging_data folder (e.g., STG_EARTHQUAKE_HISTORY)
+
+    usgs_schema:  # This is the folder name where you can set configurations for models in this folder
+      +materialized: incremental  # This will apply to all models inside the staging_data folder
+      +schema: EARTHQUAKE_DATA  # This applies only to models inside the staging_data folder (e.g., STG_EARTHQUAKE_HISTORY)
+
+
