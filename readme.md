@@ -70,7 +70,7 @@ earthquake-snowflake/
 ├── assets/
 │   ├── config.json
 │   ├── pipeline_diagram.png
-│   ├── dbt_   lineage.png  # Add DBT data lineage here
+│   ├── dbt_lineage.png  
 │   └── snowflake_diagram.png
 │
 └── README.md
