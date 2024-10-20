@@ -1,4 +1,4 @@
-*.html linguist-detectable=false
-*.json linguist-detectable=false
+assets/* linguist-detectable=false
+logs/* linguist-detectable=false
 *.sql linguist-language=SQL
 *.py linguist-language=Python
