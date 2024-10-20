@@ -9,7 +9,7 @@ def error_callback(err):
 
 #Producer retries config
 producer_config = {
-    'bootstrap.servers': '192.168.0.5:9092',
+    'bootstrap.servers': 'localhost:9092',
     'socket.timeout.ms': 60000,
     'request.timeout.ms': 30000,
     'retries': 5,
