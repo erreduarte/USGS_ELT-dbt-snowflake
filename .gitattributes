@@ -1,0 +1,4 @@
+*.html linguist-detectable=false
+*.json linguist-detectable=false
+*.sql linguist-language=SQL
+*.py linguist-language=Python
