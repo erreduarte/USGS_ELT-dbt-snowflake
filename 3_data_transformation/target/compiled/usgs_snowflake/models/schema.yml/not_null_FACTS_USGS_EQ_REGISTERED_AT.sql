@@ -1,0 +1,11 @@
+
+    
+    
+
+
+
+select REGISTERED_AT
+from EARTHQUAKE_USGS.EARTHQUAKE_DATA.FACTS_USGS_EQ
+where REGISTERED_AT is null
+
+

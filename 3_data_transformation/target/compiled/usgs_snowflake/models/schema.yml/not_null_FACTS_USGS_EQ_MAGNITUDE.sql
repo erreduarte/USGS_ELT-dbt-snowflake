@@ -1,0 +1,11 @@
+
+    
+    
+
+
+
+select MAGNITUDE
+from EARTHQUAKE_USGS.EARTHQUAKE_DATA.FACTS_USGS_EQ
+where MAGNITUDE is null
+
+

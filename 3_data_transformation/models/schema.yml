@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: DIM_LOCATION_USGS_EQ
+    columns:
+      - name: ID
+        tests:
+          - not_null
+      - name: REGISTERED_AT
+        tests:
+          - not_null
+      - name: PLACE
+        tests:
+          - not_null
+      - name: LATITUDE
+        tests:
+          - not_null
+      - name: LONGITUDE
+        tests:
+          - not_null
+      - name: ALTITUDE
+        tests:
+          - not_null
+      - name: REGISTERED_AT
+        tests:
+          - unique
+
+  - name: DIM_PROPERTIES_USGS_EQ
+    columns:
+      - name: ID
+        tests:
+          - not_null
+      - name: REGISTERED_AT
+        tests:
+          - not_null
+      - name: REGISTERED_AT
+        tests:
+          - unique
+
+  - name: DIM_STATUS_USGS_EQ
+    columns:
+      - name: ID
+        tests:
+          - not_null
+      - name: REGISTERED_AT
+        tests:
+          - not_null
+      - name: REGISTERED_AT
+        tests:
+          - unique
+
+  - name: FACTS_USGS_EQ
+    columns:
+      - name: ID
+        tests:
+          - not_null
+      - name: REGISTERED_AT
+        tests:
+          - not_null
+      - name: MAGNITUDE
+        tests:
+          - not_null
+      - name: REGISTERED_AT
+        tests:
+          - unique
