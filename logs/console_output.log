@@ -1,0 +1,49 @@
+13:58:36  Running dbt...
+13:58:38  Found 5 models, 17 data tests, 2 sources, 464 macros
+13:58:38  
+13:58:38
+13:58:38  Concurrency: 4 threads (target='default')
+13:58:38  
+13:58:39  1 of 17 START test not_null_DIM_LOCATION_USGS_EQ_ALTITUDE ...................... [RUN]
+13:58:39  2 of 17 START test not_null_DIM_LOCATION_USGS_EQ_ID ............................ [RUN]
+13:58:39  3 of 17 START test not_null_DIM_LOCATION_USGS_EQ_LATITUDE ...................... [RUN]
+13:58:39  4 of 17 START test not_null_DIM_LOCATION_USGS_EQ_LONGITUDE ..................... [RUN]
+13:58:39  4 of 17 PASS not_null_DIM_LOCATION_USGS_EQ_LONGITUDE ........................... [[32mPASS[0m in 0.85s]
+13:58:39  5 of 17 START test not_null_DIM_LOCATION_USGS_EQ_PLACE ......................... [RUN]
+13:58:40  1 of 17 PASS not_null_DIM_LOCATION_USGS_EQ_ALTITUDE ............................ [[32mPASS[0m in 0.86s]
+13:58:40  6 of 17 START test not_null_DIM_LOCATION_USGS_EQ_REGISTERED_AT ................. [RUN]
+13:58:40  2 of 17 PASS not_null_DIM_LOCATION_USGS_EQ_ID .................................. [[32mPASS[0m in 1.04s]
+13:58:40  3 of 17 PASS not_null_DIM_LOCATION_USGS_EQ_LATITUDE ............................ [[32mPASS[0m in 1.04s]
+13:58:40  7 of 17 START test not_null_DIM_PROPERTIES_USGS_EQ_ID .......................... [RUN]
+13:58:40  8 of 17 START test not_null_DIM_PROPERTIES_USGS_EQ_REGISTERED_AT ............... [RUN]
+13:58:40  6 of 17 PASS not_null_DIM_LOCATION_USGS_EQ_REGISTERED_AT ....................... [[32mPASS[0m in 0.77s]
+13:58:40  9 of 17 START test not_null_DIM_STATUS_USGS_EQ_ID .............................. [RUN]
+13:58:40  5 of 17 PASS not_null_DIM_LOCATION_USGS_EQ_PLACE ............................... [[32mPASS[0m in 0.80s]
+13:58:40  10 of 17 START test not_null_DIM_STATUS_USGS_EQ_REGISTERED_AT .................. [RUN]
+13:58:41  8 of 17 PASS not_null_DIM_PROPERTIES_USGS_EQ_REGISTERED_AT ..................... [[32mPASS[0m in 0.85s]
+13:58:41  11 of 17 START test not_null_FACTS_USGS_EQ_ID .................................. [RUN]
+13:58:41  7 of 17 PASS not_null_DIM_PROPERTIES_USGS_EQ_ID ................................ [[32mPASS[0m in 1.00s]
+13:58:41  12 of 17 START test not_null_FACTS_USGS_EQ_MAGNITUDE ........................... [RUN]
+13:58:41  9 of 17 PASS not_null_DIM_STATUS_USGS_EQ_ID .................................... [[32mPASS[0m in 0.79s]
+13:58:41  13 of 17 START test not_null_FACTS_USGS_EQ_REGISTERED_AT ....................... [RUN]
+13:58:41  10 of 17 PASS not_null_DIM_STATUS_USGS_EQ_REGISTERED_AT ........................ [[32mPASS[0m in 0.79s]
+13:58:41  14 of 17 START test unique_DIM_LOCATION_USGS_EQ_REGISTERED_AT .................. [RUN]
+13:58:41  11 of 17 PASS not_null_FACTS_USGS_EQ_ID ........................................ [[32mPASS[0m in 0.92s]
+13:58:41  12 of 17 PASS not_null_FACTS_USGS_EQ_MAGNITUDE ................................. [[32mPASS[0m in 0.79s]
+13:58:41  15 of 17 START test unique_DIM_PROPERTIES_USGS_EQ_REGISTERED_AT ................ [RUN]
+13:58:41  16 of 17 START test unique_DIM_STATUS_USGS_EQ_REGISTERED_AT .................... [RUN]
+13:58:42  13 of 17 PASS not_null_FACTS_USGS_EQ_REGISTERED_AT ............................. [[32mPASS[0m in 0.77s]
+13:58:42  17 of 17 START test unique_FACTS_USGS_EQ_REGISTERED_AT ......................... [RUN]
+13:58:42  14 of 17 PASS unique_DIM_LOCATION_USGS_EQ_REGISTERED_AT ........................ [[32mPASS[0m in 0.91s]
+13:58:42  16 of 17 PASS unique_DIM_STATUS_USGS_EQ_REGISTERED_AT .......................... [[32mPASS[0m in 0.93s]
+13:58:43  17 of 17 PASS unique_FACTS_USGS_EQ_REGISTERED_AT ............................... [[32mPASS[0m in 0.88s]
+13:58:43  15 of 17 PASS unique_DIM_PROPERTIES_USGS_EQ_REGISTERED_AT ...................... [[32mPASS[0m in 1.82s]
+13:58:43  
+13:58:43
+13:58:43  Finished running 17 data tests in 0 hours 0 minutes and 5.53 seconds (5.53s).
+13:58:43  
+13:58:43
+13:58:43  [32mCompleted successfully[0m
+13:58:43  
+13:58:43
+13:58:43  Done. PASS=17 WARN=0 ERROR=0 SKIP=0 TOTAL=17
